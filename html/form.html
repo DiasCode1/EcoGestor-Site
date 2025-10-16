@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compartilhe sua opinião | EcoGestor</title>
+    <link rel="icon" href="../Imagens/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img
+          src="../Imagens/logoEco.png"
+          alt="Ecogestor"
+          height="25%"
+          width="25%"
+        />
+      </a>
+      <nav>
+        <a class="bordadir" href="noticias.html" title="Página Inicial"
+          >Noticias</a
+        >
+        <a class="bordadir" href="App.html" title="Nosso App">Nosso App</a>
+        <a class="bordadir" href="Sobre.html" title="Nosso App"
+          >Sobre o projeto</a
+        >
+        <a href="Contato.html" title="Nosso App">Nossa equipe</a>
+      </nav>
+    </header>
+
+    <main id="opiniao">
+      <h1 id="form-title">Dê seu Feedback sobre o EcoGestor</h1>
+
+      <form action="" method="POST">
+        <div class="input-group">
+          <input type="text" id="name" name="name" required />
+          <label for="name">Nome</label>
+        </div>
+
+        <div class="input-group">
+          <input type="email" id="email" name="email" required />
+          <label for="email">Email</label>
+        </div>
+
+        <div class="input-group">
+          <textarea id="feedback" name="feedback" rows="4" required></textarea>
+          <label for="feedback">Onde podemos melhorar?</label>
+        </div>
+
+        <button onclick="enviado()" type="submit">Enviar</button>
+      </form>
+    </main>
+
+    <script>
+        function enviado(){
+            var nome = document.getElementById("name").value;
+            alert("Olá " + nome + ", agradecemos pelo seu Feedback!");
+        }
+    </script>
+    <footer>
+      <p>© 2025 EcoGestor | Projeto IFMG - Campus Ponte Nova</p>
+    </footer>
+  </body>
+</html>
