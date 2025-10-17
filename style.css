@@ -292,7 +292,7 @@ body > footer { position: sticky; top: 100vh; }
   text-align: center;
 }
 
-/* Pag Inicial*/
+/* Pag Nossa Equipe*/
 
 #titulotb h1 {
   text-align: center;
@@ -391,3 +391,179 @@ body > footer { position: sticky; top: 100vh; }
     color: gray;
     font-size: 0.9em;
 }
+#Contato #spanform {
+    font-weight: bolder;
+}
+
+#Contato #spanform a {
+    text-decoration: none;
+    color: var(--verde-fundo);
+    font-size: 1.2em;
+}
+#Contato #spanform a:hover {
+    color: rgb(85, 85, 85);
+    font-size: 1.206em;
+    
+}
+
+/* Formulário de Opinião */
+
+#opiniao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+#opiniao form {
+  background: #e4e2df;
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 520px;
+  width: 100%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+#form-title {
+  text-align: center;
+  color: #333;
+  font-size: 1.9em;
+  margin-bottom: 35px;
+  font-weight: bold;
+}
+
+/* ----------- CAMPOS NORMAIS ----------- */
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 14px 12px;
+  border: 2px solid #686a68;
+  border-radius: 10px;
+  font-size: 1em;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  resize: none;
+}
+
+.input-group label {
+  position: absolute;
+  top: 13px;
+  left: 15px;
+  color: #4a784f;
+  background-color: transparent;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #2c6e49;
+  box-shadow: 0 0 8px rgba(44, 110, 73, 0.3);
+  background-color: rgb(223, 223, 223);
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label,
+.input-group textarea:focus + label,
+.input-group textarea:valid + label {
+  top: -10px;
+  left: 10px;
+  background-color: #e4e2df;
+  font-size: 0.85em;
+  color: #2c6e49;
+  padding: 0 5px;
+}
+
+/* ----------- RADIO E CHECKBOX ----------- */
+.question {
+  margin-bottom: 25px;
+}
+
+.question p {
+  font-weight: 600;
+  color: #184d28;
+  margin-bottom: 10px;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+}
+
+/* evita conflito com os labels do input-group */
+.options label {
+  position: static !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: #333;
+  font-weight: 500;
+}
+
+/* visual dos radios e checkboxes */
+input[type="radio"],
+input[type="checkbox"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #2c6e49;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+input[type="checkbox"] {
+  border-radius: 5px;
+}
+
+input[type="radio"]:checked::after,
+input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #2c6e49;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input[type="checkbox"]:checked::after {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}
+
+/* ----------- BOTÃO ----------- */
+#opiniao button {
+  width: 100%;
+  padding: 14px 0;
+  background-color: #2c6e49;
+  color: white;
+  font-size: 1.05em;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#opiniao button:hover {
+  background-color: #1e5235;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(44, 110, 73, 0.3);
+}
+
+
+
