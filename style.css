@@ -434,7 +434,6 @@ body > footer { position: sticky; top: 100vh; }
   font-weight: bold;
 }
 
-/* ----------- CAMPOS NORMAIS ----------- */
 .input-group {
   position: relative;
   margin-bottom: 25px;
@@ -482,7 +481,6 @@ body > footer { position: sticky; top: 100vh; }
   padding: 0 5px;
 }
 
-/* ----------- RADIO E CHECKBOX ----------- */
 .question {
   margin-bottom: 25px;
 }
@@ -499,7 +497,6 @@ body > footer { position: sticky; top: 100vh; }
   gap: 10px 20px;
 }
 
-/* evita conflito com os labels do input-group */
 .options label {
   position: static !important;
   display: flex;
@@ -510,7 +507,6 @@ body > footer { position: sticky; top: 100vh; }
   font-weight: 500;
 }
 
-/* visual dos radios e checkboxes */
 input[type="radio"],
 input[type="checkbox"] {
   appearance: none;
@@ -545,7 +541,6 @@ input[type="checkbox"]:checked::after {
   border-radius: 2px;
 }
 
-/* ----------- BOTÃO ----------- */
 #opiniao button {
   width: 100%;
   padding: 14px 0;
