@@ -17,19 +17,20 @@ O foco deste repositório é exclusivamente o **site** do projeto, que servirá 
 ## Tecnologias utilizadas
 
 - **HTML5**  
-- **CSS3**
+- **CSS3**  
+- **PHP**  
+- **JavaScript**
 
 ---
 
 ## Status
 
 Interface web praticamente concluída.  
-Backend ainda não implementado.  
-O projeto pode receber melhorias, mas o núcleo visual já está estabelecido. 
+Backend em **PHP** e interações em **JavaScript** quase finalizados.  
+O projeto pode receber melhorias, mas o núcleo visual já está estabelecido.    
 
 ---
 
 ## Desenvolvedor
 
-Este branch está sendo desenvolvido por **Gustavo Sampaio Dias**, responsável pela versão web do projeto.  
- 
+Este branch está sendo desenvolvido por **Gustavo Sampaio Dias**, responsável pela versão web do projeto.
