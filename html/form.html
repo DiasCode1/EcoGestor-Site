@@ -32,10 +32,10 @@
    <main id="opiniao">
   <h1 id="form-title">Dê seu Feedback sobre o EcoGestor</h1>
 
-  <form action="#" method="POST">
+  <form action="result.php" method="get">
     <div class="input-group">
-      <input type="text" id="name" name="name" required />
-      <label for="name">Nome</label>
+      <input type="text" id="nome" name="nome" required />
+      <label for="nome">Nome</label>
     </div>
 
     <div class="input-group">
@@ -81,7 +81,7 @@
       </div>
       <div class="input-group">
         <p>
-        <textarea id="problema" name="problema" rows="4" required></textarea>
+        <textarea id="problema" name="problema" rows="4" ></textarea>
       <label for="problema">Se sim, descreva o problema...</label>
       </p>
       </div>
@@ -97,7 +97,7 @@
     </div>
 
     <div class="input-group">
-      <textarea id="feedback" name="feedback" rows="4" required></textarea>
+      <textarea id="feedback" name="feedback" rows="4"></textarea>
       <label for="feedback">Onde podemos melhorar?</label>
     </div>
 
@@ -114,13 +114,6 @@
   </form>
 </main>
 
-
-    <script>
-        function enviado(){
-            var nome = document.getElementById("name").value;
-            alert("Olá " + nome + ", agradecemos pelo seu Feedback!");
-        }
-    </script>
     <footer>
       <p>© 2025 EcoGestor | Projeto IFMG - Campus Ponte Nova</p>
     </footer>

@@ -451,6 +451,9 @@ body > footer { position: sticky; top: 100vh; }
   resize: none;
 }
 
+.input-group textarea {
+  font-size: 1.3em;
+}
 .input-group label {
   position: absolute;
   top: 13px;
@@ -559,6 +562,7 @@ input[type="checkbox"]:checked::after {
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(44, 110, 73, 0.3);
 }
+
 
 
 
