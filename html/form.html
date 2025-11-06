@@ -32,7 +32,7 @@
    <main id="opiniao">
   <h1 id="form-title">Dê seu Feedback sobre o EcoGestor</h1>
 
-  <form action="result.php" method="get">
+  <form action="result.php" method="POST">
     <div class="input-group">
       <input type="text" id="nome" name="nome" required />
       <label for="nome">Nome</label>
@@ -46,67 +46,96 @@
     <div class="question">
       <p>Como você avaliaria sua experiência geral no site?</p>
       <div class="options">
-        <label><input type="radio" name="experiencia" value="excelente" />Excelente</label>
-        <label><input type="radio" name="experiencia" value="boa" />Boa</label>
-        <label><input type="radio" name="experiencia" value="regular" />Regular</label>
-        <label><input type="radio" name="experiencia" value="ruim" />Ruim</label>
+        <label><input type="radio" name="experiencia" value="Excelente" required />Excelente</label>
+        <label><input type="radio" name="experiencia" value="Boa" />Boa</label>
+        <label><input type="radio" name="experiencia" value="Regular" />Regular</label>
+        <label><input type="radio" name="experiencia" value="Ruim" />Ruim</label>
       </div>
     </div>
 
     <div class="question">
       <p>O site foi fácil de navegar?</p>
       <div class="options">
-        <label><input type="radio" name="facilidade" value="sim" />Sim</label>
-        <label><input type="radio" name="facilidade" value="parcialmente" />Parcialmente</label>
-        <label><input type="radio" name="facilidade" value="nao" />Não</label>
+        <label><input type="radio" name="facilidade" value="Sim" required />Sim</label>
+        <label><input type="radio" name="facilidade" value="Parcialmente" />Parcialmente</label>
+        <label><input type="radio" name="facilidade" value="Nao" />Não</label>
       </div>
     </div>
 
     <div class="question">
       <p>Quais seções do site você mais gostou?</p>
       <div class="options">
-        <label><input type="checkbox" name="secoes" value="inicio" />Pagina inicial</label>
-        <label><input type="checkbox" name="secoes" value="reciclagem" />Notícias</label>
-        <label><input type="checkbox" name="secoes" value="app" />Nosso App </label>
-        <label><input type="checkbox" name="secoes" value="sobre" />Sobre o Projeto</label>
-        <label><input type="checkbox" name="secoes" value="equipe" />Nossa Equipe</label>
+        <label><input type="checkbox" name="secoes[]" value="Inicio" required />Pagina inicial</label>
+        <label><input type="checkbox" name="secoes[]" value="Reciclagem" />Notícias</label>
+        <label><input type="checkbox" name="secoes[]" value="App" />Nosso App </label>
+        <label><input type="checkbox" name="secoes[]" value="Sobre" />Sobre o Projeto</label>
+        <label><input type="checkbox" name="secoes[]" value="Equipe" />Nossa Equipe</label>
       </div>
     </div>
 
     <div class="question">
       <p>Você encontrou algum erro ou problema técnico?</p>
       <div class="options">
-        <label><input type="radio" name="erro" value="sim" />Sim</label>
-        <label><input type="radio" name="erro" value="nao" />Não</label>
+      <label><input type="radio" name="erro" value="Sim" required />Sim</label>
+      <label><input type="radio" name="erro" value="Nao" />Não</label>
       </div>
       <div class="input-group">
-        <p>
-        <textarea id="problema" name="problema" rows="4" ></textarea>
+      <p>
+      <textarea id="problema" name="problema" rows="4"></textarea>
       <label for="problema">Se sim, descreva o problema...</label>
       </p>
       </div>
     </div>
 
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const radios = document.querySelectorAll('input[name="erro"]');
+    const problema = document.getElementById('problema');
+    const form = document.querySelector('form[action="result.php"]');
+
+    function atualizarCampoProblema() {
+    const simSelecionado = document.querySelector('input[name="erro"][value="Sim"]')?.checked;
+    problema.disabled = !simSelecionado;
+    problema.required = !!simSelecionado;
+    if (!simSelecionado) problema.value = '';
+    }
+
+    radios.forEach(r => r.addEventListener('change', atualizarCampoProblema));
+    atualizarCampoProblema();
+
+    if (form) {
+    form.addEventListener('submit', function (e) {
+      const simSelecionado = document.querySelector('input[name="erro"][value="Sim"]')?.checked;
+      if (simSelecionado && problema.value.trim() === '') {
+      e.preventDefault();
+      alert('Por favor, descreva o problema encontrado no campo indicado.');
+      problema.focus();
+      }
+    });
+    }
+  });
+  </script>
+
     <div class="question">
       <p>O design do site é agradável visualmente?</p>
       <div class="options">
-        <label><input type="radio" name="design" value="sim" />Sim</label>
-        <label><input type="radio" name="design" value="parcialmente" />Parcialmente</label>
-        <label><input type="radio" name="design" value="nao" />Não</label>
+        <label><input type="radio" name="design" value="Sim" required />Sim</label>
+        <label><input type="radio" name="design" value="Parcialmente" />Parcialmente</label>
+        <label><input type="radio" name="design" value="Nao" />Não</label>
       </div>
     </div>
 
     <div class="input-group">
-      <textarea id="feedback" name="feedback" rows="4"></textarea>
+      <textarea id="feedback" name="feedback" rows="4" required></textarea>
       <label for="feedback">Onde podemos melhorar?</label>
     </div>
 
     <div class="question">
       <p>Você recomendaria o site para outras pessoas?</p>
       <div class="options">
-        <label><input type="radio" name="recomendacao" value="sim" />Provavelmente sim</label>
-        <label><input type="radio" name="recomendacao" value="talvez" />Talvez</label>
-        <label><input type="radio" name="recomendacao" value="nao" />Provavelmente não</label>
+        <label><input type="radio" name="recomendacao" value="Sim" required />Provavelmente sim</label>
+        <label><input type="radio" name="recomendacao" value="Talvez" />Talvez</label>
+        <label><input type="radio" name="recomendacao" value="Nao" />Provavelmente não</label>
       </div>
     </div>
 
