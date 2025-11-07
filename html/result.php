@@ -64,7 +64,7 @@
           $erro = $_POST["erro"];
           $problema = $_POST["problema"] ?? ""; 
           $design = $_POST["design"];
-          $feedback = $_POST["feedback"];
+          $feedback = $_POST["feedback"] ?? "";
           $recomendacao = $_POST["recomendacao"];
 
           $sql = "SELECT * FROM feedback";
