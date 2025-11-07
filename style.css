@@ -229,6 +229,14 @@ footer p {
 #VSec {
    margin-top: 20px; 
 }
+#Voltar {
+    position: fixed;
+    bottom: 40px;
+    right: 90%;
+    z-index: 1000;
+    display: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
 #Voltar img {
     color: var(--fundo);
     width: 30px;
@@ -236,6 +244,7 @@ footer p {
     background-color: hsla(120, 89%, 7%, 0.498);
     padding: 10px;
     border-radius: 40px;
+  
 }
 #Voltar img:hover {
     background-color: var(--fundo);
