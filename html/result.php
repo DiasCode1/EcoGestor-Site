@@ -48,7 +48,7 @@
           <div id="format">
           <?php
 
-          $con = mysqli_connect("localhost","root","","ecogestor");
+          $con = mysqli_connect("localhost","Gustavo","ecogestordb","ecogestor");
           if (mysqli_connect_errno()) {
               echo "Falha ao conectar ao MySQL: " . mysqli_connect_error();
           }
@@ -57,7 +57,7 @@
           $email = $_POST["email"];
           $experiencia = $_POST["experiencia"];
           $facilidade = $_POST["facilidade"];
-          $secoes = $_POST["secoes"];
+          $secoes = $_POST["secoes"] ?? "";
                     if (is_array($secoes)) {
                      $secoes = implode(", ", $secoes);
                     }
@@ -70,7 +70,12 @@
           $sql = "SELECT * FROM feedback";
           $result = mysqli_query($con, $sql);
 
-          $sql = "INSERT INTO feedback VALUES ('$nome', '$email', '$experiencia', '$facilidade', '$secoes', '$erro', '$problema', '$design', '$feedback', '$recomendacao')";
+          $sql = "INSERT INTO feedback VALUES (
+                  NULL, '$nome', '$email', '$experiencia', '$facilidade',
+                  '$secoes', '$erro', '$problema', '$design', '$feedback', '$recomendacao'
+                  )";
+
+
           if (!mysqli_query($con, $sql)) {
               die('Erro: ' . mysqli_error($con));
           }
