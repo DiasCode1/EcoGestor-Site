@@ -48,7 +48,7 @@
           <div id="format">
           <?php
 
-          $con = mysqli_connect("localhost","Gustavo","ecogestordb","ecogestor");
+          $con = mysqli_connect("localhost","Gustavo","ecogestorbd","ecogestor");
           if (mysqli_connect_errno()) {
               echo "Falha ao conectar ao MySQL: " . mysqli_connect_error();
           }
@@ -91,5 +91,13 @@
     <footer>
       <p>© 2025 EcoGestor | Projeto IFMG - Campus Ponte Nova</p>
     </footer>
+
+          <script>
+          setTimeout(function() {
+            window.location.href = "index.html";
+          }, 3000);
+</script>
+
+
   </body>
 </html>
