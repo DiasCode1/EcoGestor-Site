@@ -68,7 +68,6 @@
           $recomendacao = $_POST["recomendacao"];
 
           $sql = "SELECT * FROM feedback";
-          $result = mysqli_query($con, $sql);
 
           $sql = "INSERT INTO feedback VALUES ('$nome', '$email', '$experiencia', '$facilidade', '$secoes', '$erro', 
           '$problema', '$design', '$feedback', '$recomendacao')";
