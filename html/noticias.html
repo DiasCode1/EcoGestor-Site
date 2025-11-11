@@ -2,52 +2,82 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <title>EcoGestor - Início</title>
+    <title>EcoGestor - Notícias</title>
     <link rel="icon" href="../Imagens/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../style.css" />
     <style>
-      .caixatexto {
-        background-color: #f0f0f0;
-        border: 2px solid #2c493c;
-        border-radius: 8px;
+      body {
+        font-family: 'Segoe UI', sans-serif;
+      }
+
+      #titulo {
+        text-align: center;
+        margin: 40px 0 20px;
+      }
+
+      #titulo h1 {
+        color: #2c493c;
+        font-size: 2em;
+      }
+
+      #noticias {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+        padding: 20px 60px;
+        justify-items: center;
+      }
+
+      .card {
+        background-color: #d2cdc597;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        max-width: 360px;
+      }
+
+      .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+      }
+
+      .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .conteudo {
         padding: 20px;
-        padding-top: 10px;
-        box-shadow: 0 4px 8px rgba(44, 73, 60, 0.3);
-        font-size: 1em;
-        line-height: 1.4;
-        margin: 0px 20px 20px 20px;
-        flex: 1 1 280px;
-        max-width: 360px; 
-        align-items: center;
         text-align: justify;
       }
-      #conteudo {
-      display: flex;
-      flex-wrap: wrap;          
-      justify-content: center; 
-      gap: 20px;
-      flex-direction: row;
-      }
-      
-      #conteudo a {
-        text-decoration: none;
-        color: inherit;
-      }
-      #textolink {
-        padding-top: 20px;
-        font-size: 1.2em;
-        font-weight: bold;
-        margin-bottom: 10px;
-        color: inherit;
-      }
-      .caixatexto img {
-        width: 100%;              
-        border-radius: 8px;
-      }
-      .caixatexto:hover {
+
+      .conteudo h3 {
         color: #2c493c;
-        box-shadow: 0 6px 12px rgba(44, 73, 60, 0.5);
-        transform: translateY(-2px);
+        font-size: 1.1em;
+        margin-bottom: 10px;
+      }
+
+      .conteudo p {
+        color: #333;
+        font-size: 0.95em;
+        margin-bottom: 15px;
+      }
+
+      .botao {
+        display: inline-block;
+        background-color: #2c493c;
+        color: white;
+        text-decoration: none;
+        padding: 8px 16px;
+        border-radius: 6px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+
+      .botao:hover {
+        background-color: #4a7b63;
       }
     </style>
   </head>
@@ -55,89 +85,64 @@
   <body>
     <header>
       <a href="index.html">
-        <img
-          src="../Imagens/logoEco.png"
-          alt="Ecogestor"
-          height="25%" width="25%" 
-        />
+        <img src="../Imagens/logoEco.png" alt="EcoGestor" height="25%" width="25%" />
       </a>
       <nav>
-        <a class="bordadir" href="noticias.html" title="Página Inicial"
-          >Noticias</a
-        >
-        <a class="bordadir" href="App.html" title="Nosso App">Nosso App</a>
-
-        <a class="bordadir" href="Sobre.html" title="Nosso App"
-          >Sobre o projeto</a
-        >
-
-        <a href="Contato.html" title="Nosso App">Nossa equipe</a>
+        <a href="noticias.html" class="bordadir">Notícias</a>
+        <a href="App.html" class="bordadir">Nosso App</a>
+        <a href="Sobre.html" class="bordadir">Sobre o Projeto</a>
+        <a href="Contato.html">Nossa Equipe</a>
       </nav>
     </header>
 
     <main>
-
       <div id="titulo">
-        <h1>Bem-vindo ao EcoGestor</h1>
-
-        <h2 style="font-size: 20px">
-          “Reciclar pode ser simples, educativo e recompensador.”
+        <h1>Notícias sobre Sustentabilidade</h1>
+        <h2 style="font-size: 18px; color: #555;">
+          Acompanhe as principais atualizações sobre reciclagem e meio ambiente 
         </h2>
       </div>
 
-      <section id="conteudo">
-          <a href="noticia1.html">
-            <article class="caixatexto">
-              <h3>
-                Estudos indicam que reciclar gera impactos profundos no meio
-                ambiente e na economia.
-              </h3>
-              <img src="../Imagens/reciclar.png" alt="reciclagem imagem">
-            </article>
-          </a>
-      
-          <a href="noticia2.html">
-            <article class="caixatexto">
-              <h3>
-                Estudos mostram que a compostagem transforma resíduos orgânicos em benefícios ambientais e econômicos.
-              </h3>
-              <img src="../Imagens/compostagem.jpg" alt="compostagem imagem">
-            </article>
-          </a>
-
-           <article>
-          <figure class="caixatexto">
-            <a
-              href="https://agenciabrasil.ebc.com.br/geral/noticia/2022-06/indice-de-reciclagem-no-brasil-e-de-4-diz-abrelpe"
-              target="_blank"
-            >
-              <figcaption id="textolink">
-                Índice de reciclagem no Brasil é de apenas 4%, diz ABRELPE.
-              </figcaption>
-              <img
-                src="../Imagens/sp_chegada_lata_solta.webp"
-                alt="Reciclagem no Brasil"
-              />
-            </a>
-          </figure>
-
+      <section id="noticias">
+        <article class="card">
+          <img src="../Imagens/reciclar.png" alt="Reciclagem">
+          <div class="conteudo">
+            <h3>Reciclagem gera impactos positivos no meio ambiente e na economia</h3>
+            <p>Segundo estudos, aumentar o índice de reciclagem no Brasil pode gerar bilhões em economia e preservar milhões de árvores.</p>
+            <a href="noticia1.html" class="botao">Ler mais</a>
+          </div>
         </article>
 
-          <a href="https://www.youtube.com/watch?v=7FvWW9P1V8U" target="_blank">
-          <article class="caixatexto">
+        <article class="card">
+          <img src="../Imagens/compostagem.jpg" alt="Compostagem">
+          <div class="conteudo">
+            <h3>Compostagem transforma resíduos em oportunidades</h3>
+            <p>A prática da compostagem reduz emissões de CO₂ e gera adubo natural para agricultura sustentável.</p>
+            <a href="noticia2.html" class="botao">Ler mais</a>
+          </div>
+        </article>
 
-            <h3>
-              "A Importância da Reciclagem para o Meio Ambiente"
-            </h3>
-            <img src="../Imagens/reciclagemviedo.webp" alt="imagemvideo">
-          </article>
-          </a>
+        <article class="card">
+          <img src="../Imagens/sp_chegada_lata_solta.webp" alt="Índice de reciclagem">
+          <div class="conteudo">
+            <h3>Índice de reciclagem no Brasil é de apenas 4%</h3>
+            <p>Segundo a ABRELPE, o país ainda enfrenta desafios na coleta seletiva e conscientização da população.</p>
+            <a href="https://agenciabrasil.ebc.com.br/geral/noticia/2022-06/indice-de-reciclagem-no-brasil-e-de-4-diz-abrelpe" target="_blank" class="botao">Ler mais</a>
+          </div>
+        </article>
 
-          </section>
-
+        <article class="card">
+          <img src="../Imagens/reciclagemviedo.webp" alt="Vídeo sobre reciclagem">
+          <div class="conteudo">
+            <h3>A importância da reciclagem para o meio ambiente</h3>
+            <p>Assista ao vídeo educativo sobre como pequenas atitudes fazem grande diferença na sustentabilidade.</p>
+            <a href="https://www.youtube.com/watch?v=7FvWW9P1V8U" target="_blank" class="botao">Assistir</a>
+          </div>
+        </article>
+      </section>
     </main>
 
-    <footer style="margin-top: 15px;">
+    <footer>
       <p>© 2025 EcoGestor | Projeto IFMG - Campus Ponte Nova</p>
     </footer>
   </body>

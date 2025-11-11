@@ -41,7 +41,9 @@
         line-height: 1.6;
         color: var(--cor-escura);
         padding-right: 5px;
+        text-align: justify;
       }
+
       #textolink {
         color: var(--cor-escura);
         font-weight: bold;
@@ -49,7 +51,6 @@
       }
 
       .caixa {
-        border: 1px solid v;
         border-radius: 8px;
         padding: 10px;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -57,6 +58,7 @@
         width: 100%;
         margin-bottom: 20px;
       }
+
       #caixatexto {
         background-color: #f0f0f0;
         color: #181a19;
@@ -66,90 +68,279 @@
         box-shadow: 0 4px 8px rgba(44, 73, 60, 0.3);
         font-size: 16px;
         line-height: 1.6;
+        text-align: justify;
       }
+
       .caixa .textovideo {
         margin-top: 0;
       }
 
       #textoestudo p {
         margin-top: 10px;
+        text-align: justify;
       }
+
       .item figure.caixa {
         margin-top: 0;
       }
+
       #textoestudo h3 {
         margin-top: 0;
+      }
+
+      #carrossel {
+        position: relative;
+        max-width: 800px;
+        margin: 40px auto;
+        overflow: hidden;
+        text-align: center;
+      }
+
+      .fase {
+        display: none;
+        animation: fade 0.6s ease-in-out;
+        text-align: center;
+      }
+
+      .fase.ativa {
+        display: block;
+      }
+
+      .fase img {
+        width: 100%;
+        max-width: 600px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+      }
+
+      .fase h3 {
+        color: var(--verde-escuro);
+        margin-bottom: 8px;
+      }
+
+      .fase p {
+        text-align: justify;
+        max-width: 750px;
+        margin: 0 auto;
+        color: var(--cor-escura);
+        font-size: 1.05em;
+        line-height: 1.6;
+      }
+
+      .seta {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(44, 73, 60, 0.7);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        font-size: 1.6em;
+        padding: 8px 12px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .seta:hover {
+        background-color: var(--verde-escuro);
+      }
+
+      #anterior {
+        left: 10px;
+      }
+
+      #proximo {
+        right: 10px;
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0;
+          transform: scale(0.95);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      #repositorio {
+        text-align: center;
+        margin-top: 70px;
+      }
+
+      #repositorio p {
+        text-align: justify;
+        max-width: 700px;
+        margin: 15px auto;
+        color: var(--cor-escura);
+        font-size: 1.1em;
+        line-height: 1.6;
       }
     </style>
   </head>
 
   <body>
-
     <header>
-        <a href="index.html">
-          <img src="../Imagens/logoEco.png" alt="Ecogestor" height="25%" width="25%" />
-        </a>
+      <a href="index.html">
+        <img
+          src="../Imagens/logoEco.png"
+          alt="Ecogestor"
+          height="25%"
+          width="25%"
+        />
+      </a>
       <nav>
-
-        <a class="bordadir" href="noticias.html" title="Página Inicial">Noticias</a >
+        <a class="bordadir" href="noticias.html" title="Página Inicial">Noticias</a>
         <a class="bordadir" href="App.html" title="Nosso App">Nosso App</a>
-
-        <a class="bordadir" href="Sobre.html" title="Nosso App"
-          >Sobre o projeto</a>
-
+        <a class="bordadir" href="Sobre.html" title="Nosso App">Sobre o projeto</a>
         <a href="Contato.html" title="Nosso App">Nossa equipe</a>
-
       </nav>
-
     </header>
 
-
     <main>
-
       <audio autoplay preload="metadata">
-
         <source src="../Audios/audioinicio.mp3" type="audio/mpeg" />
         <source src="../Audios/audioinicio.ogg" type="audio/ogg" />
         <source src="../Audios/audioinicio.wav" type="audio/wav" />
-
         Seu navegador não suporta áudio.
-
       </audio>
 
-
       <div id="titulo">
-        <img style="margin-top: -50px;" src="../Imagens/BannerInicial.png" alt="BannerInicial">
         <h1>De uma Ideia Sustentável à Ação: A Criação do EcoGestor</h1>
-        <div id="alinhar">
-          <p style="font-size: 1.3em">
-            O EcoGestor nasceu como um <a href="Sobre.html">projeto interdisciplinar</a> desenvolvido por
-              <a href="Contato.html">alunos do IFMG Campus Ponte Nova</a>, unindo conhecimentos das
-              disciplinas de Projeto de Software, Programação Web, <a href="App.html">
-                Programação
-                para Dispositivos Móveis
-              </a> e Empreendedorismo.
-          </p>
 
-          <p style="font-size: 1.34em;"> Motivados pelos
-              desafios da reciclagem no Brasil, criamos uma solução digital que
-              conecta pessoas à coleta seletiva, com foco na <a href="noticias.html">educação ambiental</a>,
-              praticidade e impacto social.
-            </p>
-        </div>
+<div id="alinhar">
+  <div class="cardtexto">
+    <div class="conteudo-card">
+      <p>
+        O EcoGestor nasceu como um 
+        <a href="Sobre.html">projeto interdisciplinar</a> desenvolvido por 
+        <a href="Contato.html">alunos do IFMG Campus Ponte Nova</a>, unindo 
+        conhecimentos das disciplinas de Projeto de Software, Programação Web, 
+        <a href="App.html">Programação para Dispositivos Móveis</a> e Empreendedorismo.
+      </p>
+    </div>
+  </div>
+
+  <div class="cardtexto">
+    <div class="conteudo-card">
+      <p>
+        Inspirados pelos desafios da reciclagem no Brasil, criamos uma solução digital que 
+        conecta pessoas à coleta seletiva, com foco em 
+        <a href="noticias.html">educação ambiental</a>, praticidade e impacto social.
+      </p>
+    </div>
+  </div>
+</div>
+
       </div>
+
       <div id="Contato">
-      <p id="rodapezinho">
+        <p id="rodapezinho" style="text-align: justify;">
           Participe como apoiador, testador do app ou divulgador da ideia na sua
-          comunidade. Nos dê seu <span id="spanform"><a href="form.html">feedback</a></span> e ajude a melhorar o EcoGestor!
+          comunidade. Nos dê seu <span id="spanform"><a href="form.html">feedback</a></span> e ajude a
+          melhorar o EcoGestor!
         </p>
+      </div>
+
+      <section id="fases">
+        <h2 style="text-align: center; color: var(--verde-escuro); margin-top: 50px;">
+          Fases de Desenvolvimento
+        </h2>
+        <p style="text-align: justify; max-width: 800px; margin: auto; color: var(--cor-escura); font-size: 1.2em;">
+          O EcoGestor passou por várias etapas até se tornar o que é hoje.
+          Abaixo, você pode acompanhar como o projeto evoluiu — da estrutura
+          inicial à integração completa entre o site e o aplicativo.
+        </p>
+
+        <div id="carrossel">
+          <button class="seta" id="anterior">❮</button>
+
+          <div class="fase ativa">
+            <img src="../Imagens/HTML.png" alt="Fase HTML" />
+            <h3>Fase 1 — Estrutura HTML</h3>
+            <p>
+              Nessa etapa, criamos a base do site, organizando os elementos
+              principais em HTML para estruturar o conteúdo e a navegação.
+            </p>
+          </div>
+
+          <div class="fase">
+            <img src="../Imagens/CSS.png" alt="Fase CSS" />
+            <h3>Fase 2 — Estilo com CSS</h3>
+            <p>
+              Aqui o visual começou a ganhar forma! Foram aplicadas cores,
+              fontes e layout responsivo para tornar o site mais agradável.
+            </p>
+          </div>
+
+          <div class="fase">
+            <img src="../Imagens/Form.png" alt="Fase JS/PHP" />
+            <h3>Fase 3 — Funcionalidades com JS e PHP</h3>
+            <p>
+              Adicionamos scripts JavaScript para interatividade e PHP para
+              conexão com banco de dados, deixando o site mais dinâmico e funcional.
+            </p>
+          </div>
+
+          <button class="seta" id="proximo">❯</button>
         </div>
+      </section>
+
+      <section id="repositorio">
+        <h2 style="text-align: center; color: var(--verde-escuro); margin-top: 70px;">
+          Nosso Repositório no GitHub
+        </h2>
+        <div style="text-align: center; margin-top: 20px">
+          <img
+            src="../Imagens/RepoGit.png"
+            alt="Repositório GitHub"
+            style="width: 60%; max-width: 500px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);"
+          />
+          <p>
+            Todo o desenvolvimento do EcoGestor está disponível no GitHub!
+            Confira o código-fonte completo e veja como o projeto foi construído
+            passo a passo.
+          </p>
+          <a href="https://github.com/DiasCode1/EcoGestor-Site" target="_blank">
+            <button
+              style="
+                margin-top: 20px;
+                background-color: var(--verde-escuro);
+                color: white;
+                border: none;
+                padding: 12px 25px;
+                border-radius: 10px;
+                font-size: 1em;
+                cursor: pointer;
+                transition: 0.3s;
+              "
+            >
+              Ver no GitHub
+            </button>
+          </a>
+        </div>
+      </section>
     </main>
 
-    <footer>  
-
+    <footer>
       <p>© 2025 EcoGestor | Projeto IFMG - Campus Ponte Nova</p>
-      
-      
     </footer>
+
+    <script>
+      const fases = document.querySelectorAll(".fase");
+      const btnAnterior = document.getElementById("anterior");
+      const btnProximo = document.getElementById("proximo");
+      let index = 0;
+
+      function mostrarFase(novoIndex) {
+        fases[index].classList.remove("ativa");
+        index = (novoIndex + fases.length) % fases.length;
+        fases[index].classList.add("ativa");
+      }
+
+      btnAnterior.addEventListener("click", () => mostrarFase(index - 1));
+      btnProximo.addEventListener("click", () => mostrarFase(index + 1));
+    </script>
   </body>
 </html>

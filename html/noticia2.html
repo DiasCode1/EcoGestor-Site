@@ -2,31 +2,61 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <title>EcoGestor - Início</title>
+    <title>EcoGestor - Compostagem</title>
     <link rel="icon" href="../Imagens/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../style.css" />
     <style>
-         #caixatexto {
-        background-color: #f0f0f0;
-        border: 2px solid #2c493c;
-        border-radius: 8px;
-        padding: 20px;
-        box-shadow: 0 4px 8px rgba(44, 73, 60, 0.3);
-        font-size: 1em;
-        line-height: 1.4;
-        margin: 20px 20px;
-        max-width: 50%;
-        align-items: center;
-        text-align: justify;
-        margin: 25px auto;
+      main {
+        margin-bottom: 40px;
       }
-      #texto {
-        text-align: justify;
+
+      #titulo {
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      #titulo h1 {
+        font-size: 2em;
+        color: #2c493c;
+      }
+
+      #titulo h2 {
         font-size: 1.1em;
-        line-height: 1.14;
-        margin-top: 10px;
-        font-family: Arial, sans-serif;
-        font-weight: 500;
+        color: #3b5f4c;
+        margin-top: 8px;
+        font-style: italic;
+      }
+
+      #caixatexto {
+        background-color: #ffffff;
+        border: 2px solid #2c493c;
+        border-radius: 12px;
+        padding: 30px;
+        box-shadow: 0 4px 10px rgba(44, 73, 60, 0.3);
+        font-size: 1em;
+        line-height: 1.6;
+        margin: 40px auto;
+        max-width: 800px;
+        text-align: justify;
+        transition: transform 0.3s ease;
+      }
+
+      #caixatexto:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 14px rgba(44, 73, 60, 0.4);
+      }
+
+      #caixatexto h3 {
+        text-align: center;
+        font-size: 1.4em;
+        color: #2c493c;
+        margin-bottom: 15px;
+      }
+
+      #texto {
+        font-size: 1.1em;
+        color: #333;
+        line-height: 1.8;
       }
     </style>
   </head>
@@ -36,81 +66,80 @@
       <a href="index.html">
         <img
           src="../Imagens/logoEco.png"
-          alt="Ecogestor"
-          height="25%" width="25%" 
+          alt="EcoGestor"
+          height="25%"
+          width="25%"
         />
       </a>
       <nav>
         <a class="bordadir" href="noticias.html" title="Página Inicial"
-          >Noticias</a
+          >Notícias</a
         >
         <a class="bordadir" href="App.html" title="Nosso App">Nosso App</a>
 
-        <a class="bordadir" href="Sobre.html" title="Nosso App"
-          >Sobre o projeto</a
+        <a class="bordadir" href="Sobre.html" title="Sobre o Projeto"
+          >Sobre o Projeto</a
         >
 
-        <a href="Contato.html" title="Nosso App">Nossa equipe</a>
+        <a href="Contato.html" title="Nossa Equipe">Nossa Equipe</a>
       </nav>
     </header>
 
     <main>
-
       <div id="titulo">
-        <h1>Bem-vindo ao EcoGestor</h1>
-
-        <h2 style="font-size: 20px">
-          “Reciclar pode ser simples, educativo e recompensador.”
-        </h2>
+        <h1>Compostagem transforma resíduos em oportunidades</h1>
+        <h2>A prática da compostagem reduz emissões de CO₂ e gera adubo natural para agricultura sustentável.</h2>
       </div>
 
-          <article id="caixatexto">
-            <h3>
-              Estudos mostram que a compostagem transforma resíduos orgânicos em benefícios ambientais e econômicos.
-            </h3>
+      <article id="caixatexto"> 
 
-            <p id="texto">
-              Segundo a Embrapa, cerca de 50% dos resíduos urbanos no Brasil são
-              orgânicos, como restos de alimentos, folhas e podas de jardins.
-              Cada tonelada de resíduos orgânicos compostados evita a emissão de
-              aproximadamente 500 kg de CO₂ equivalente, reduz o volume de lixo
-              enviado a aterros e gera até 10 mil litros de água economizados.
-              Além disso, a compostagem transforma esses resíduos em adubo
-              natural, rico em nutrientes, diminuindo a necessidade de
-              fertilizantes químicos e melhorando a qualidade do solo.<br />
+        <p id="texto">
 
-              O Circularity Gap Report 2025 aponta que, globalmente, apenas 3%
-              dos resíduos orgânicos são reaproveitados de forma eficiente,
-              embora o potencial chegue a 25% com programas estruturados de
-              compostagem. No Brasil, segundo a Abrelpe, menos de 2% do lixo
-              orgânico é destinado à compostagem, gerando desperdício de
-              recursos e perdas econômicas significativas. Programas de
-              compostagem urbana e industrial poderiam gerar milhões de reais em
-              adubo, reduzir custos de transporte e destinação de lixo e ainda
-              criar milhares de empregos na coleta e no processamento dos
-              resíduos.<br />
+          Segundo a <strong>Embrapa</strong>, cerca de 50% dos resíduos urbanos no Brasil são
+          orgânicos, como restos de alimentos, folhas e podas de jardins.
+          Cada tonelada de resíduos orgânicos compostados evita a emissão de
+          aproximadamente <strong>500 kg de CO₂ equivalente</strong>, reduz o volume de lixo
+          enviado a aterros e gera até 10 mil litros de água economizados.
+          Além disso, a compostagem transforma esses resíduos em adubo
+          natural, rico em nutrientes, diminuindo a necessidade de
+          fertilizantes químicos e melhorando a qualidade do solo.<br /><br />
 
-              A prática de compostagem ainda se mostra eficaz na mitigação das
-              mudanças climáticas. Ao evitar o envio de resíduos orgânicos para
-              aterros, reduz-se a produção de metano, um gás com potencial de
-              aquecimento global 25 vezes maior que o CO₂. Em nível global, a
-              valorização de resíduos orgânicos poderia gerar impactos
-              ambientais positivos equivalentes a milhões de toneladas de CO₂
-              evitadas anualmente. Além disso, o uso do composto melhora a
-              capacidade de retenção de água do solo, combate a erosão e
-              favorece a agricultura sustentável.<br />
+          O <strong>Circularity Gap Report 2025</strong> aponta que, globalmente, apenas 3%
+          dos resíduos orgânicos são reaproveitados de forma eficiente,
+          embora o potencial chegue a 25% com programas estruturados de
+          compostagem. No Brasil, segundo a <strong>Abrelpe</strong>, menos de 2% do lixo
+          orgânico é destinado à compostagem, gerando desperdício de
+          recursos e perdas econômicas significativas. Programas de
+          compostagem urbana e industrial poderiam gerar milhões de reais em
+          adubo, reduzir custos de transporte e destinação de lixo e ainda
+          criar milhares de empregos na coleta e no processamento dos
+          resíduos.<br /><br />
 
-              Cidades como Curitiba, Belo Horizonte e São Paulo já possuem
-              programas de compostagem que demonstram benefícios econômicos,
-              sociais e ambientais. Essas iniciativas estimulam a
-              conscientização da população sobre desperdício de alimentos,
-              incentivam hábitos sustentáveis e promovem a economia circular.
-              Segundo a Fundação Ellen MacArthur, a valorização de resíduos
-              orgânicos pode gerar até R$ 5 bilhões por ano no Brasil, além de
-              milhares de empregos e um ciclo de produção mais eficiente e
-              sustentável.
-            </p>
-          </article>
+          A prática de compostagem ainda se mostra eficaz na mitigação das
+          mudanças climáticas. Ao evitar o envio de resíduos orgânicos para
+          aterros, reduz-se a produção de metano, um gás com potencial de
+          aquecimento global <strong>25 vezes maior que o CO₂</strong>. Em nível global, a
+          valorização de resíduos orgânicos poderia gerar impactos
+          ambientais positivos equivalentes a milhões de toneladas de CO₂
+          evitadas anualmente. Além disso, o uso do composto melhora a
+          capacidade de retenção de água do solo, combate a erosão e
+          favorece a agricultura sustentável.<br /><br />
+
+          Cidades como <strong>Curitiba, Belo Horizonte e São Paulo</strong> já possuem
+          programas de compostagem que demonstram benefícios econômicos,
+          sociais e ambientais. Essas iniciativas estimulam a
+          conscientização da população sobre desperdício de alimentos,
+          incentivam hábitos sustentáveis e promovem a economia circular.
+          Segundo a <strong>Fundação Ellen MacArthur</strong>, a valorização de resíduos
+          orgânicos pode gerar até <strong>R$ 5 bilhões por ano no Brasil</strong>, além de
+          milhares de empregos e um ciclo de produção mais eficiente e
+          sustentável.
+        </p>
+          <button type="button" onclick="history.back()" style="background:#2c493c;color:#fff;border:none;padding:8px 14px;border-radius:8px;cursor:pointer;font-weight:600;margin-bottom:16px;">
+            ← Voltar
+          </button>
+      </article>
+      
     </main>
 
     <footer>

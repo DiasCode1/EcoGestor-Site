@@ -171,24 +171,25 @@
     </footer>
 
     <script>
-  const voltar = document.getElementById("Voltar");
+      
+    const voltar = document.getElementById("Voltar");
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 700) {
-      voltar.style.display = "block";
-    } else {
-      voltar.style.display = "none";
-    }
-  });
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 700) {
+          voltar.style.display = "block";
+        } else {
+          voltar.style.display = "none";
+        }
+      });
 
-  voltar.addEventListener("click", (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  });
-</script>
+      voltar.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
+    </script>
 
 
   </body>

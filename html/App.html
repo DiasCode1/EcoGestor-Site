@@ -77,14 +77,13 @@
 
             <h3 id="Mapa">Mapa De Coletas</h3>
             <p>Encontre facilmente os pontos de coleta mais próximos, com filtros por tipo de resíduo reciclável.</p>
-            <picture>
-                <source media="(max-width: 750px)" srcset="../imagens_dinamicas/mapa-p.png" type="image/png">
-                <source media="(max-width: 1050px)" srcset="../imagens_dinamicas/mapa-m.png" type="image/png">
-                <img src="../imagens_dinamicas/mapa-m.png" alt="imagem flexível">
+            <picture style="margin-left: 120px;">
+                <source media="(max-width: 750px)" srcset="../imagens_dinamicas/mapa-p.png" type="image/png" style="border-radius: 10px;">
+                <source media="(max-width: 1050px)" srcset="../imagens_dinamicas/mapa-m.png" type="image/png" style="border-radius: 10px;">
+                <img src="../imagens_dinamicas/mapa-m.png" alt="imagem flexível" style="border-radius: 10px;">
             </picture>
             <br>
-            <div id="VSec"><a id="Voltar" href="App.html"><img src="../Imagens/seta.png" alt="seta"></a>
-</div>
+            <div id="VSec"><a id="Voltar" href="App.html"><img src="../Imagens/seta.png" alt="seta"></a></div>
 
         </section>
 
@@ -97,21 +96,21 @@
     <script>
   const voltar = document.getElementById("Voltar");
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 700) {
-      voltar.style.display = "block";
-    } else {
-      voltar.style.display = "none";
-    }
-  });
-
-  voltar.addEventListener("click", (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 700) {
+        voltar.style.display = "block";
+      } else {
+        voltar.style.display = "none";
+      }
     });
-  });
+
+    voltar.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
 </script>
 
 </body>
